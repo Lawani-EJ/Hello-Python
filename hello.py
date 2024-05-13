@@ -27,3 +27,19 @@ str(2.3)
 #Checking the type of True and False
 type(True)
 type(False)
+
+#convert float and integer to a string
+str(1)
+str(4.5)
+
+#Convert true to an int
+int(True)
+
+#convert 1 to boolean
+bool(1)
+
+#convert 0 to boolean
+bool(0)
+
+#convert true to float
+float(True)
