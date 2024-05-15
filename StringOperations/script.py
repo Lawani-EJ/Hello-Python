@@ -14,3 +14,16 @@ print(Numbers[::2])
 
 "0123456".find('1') 
 print("0123456".find('1'))
+
+#Indexing of string
+name = "Micheal Jackson"
+name
+
+print(name[0])
+print(name[6])
+print(name[13])
+
+#Negative Indexing
+print(name[-1])
+print(name[-15])
+print(len(name))
