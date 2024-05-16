@@ -27,3 +27,9 @@ print(name[13])
 print(name[-1])
 print(name[-15])
 print(len(name))
+
+#slicing
+#Taking the slice on the varaible name from the index 0 - 3
+print(name[0:4])
+##Taking the slice on the varaible name from the index 8 - 11
+name[8:12]
