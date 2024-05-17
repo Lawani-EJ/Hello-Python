@@ -32,10 +32,34 @@ print(len(name))
 #Taking the slice on the varaible name from the index 0 - 3
 print(name[0:4])
 ##Taking the slice on the varaible name from the index 8 - 11
-name[8:12]
+print(name[8:12])
 
 #stride
 #Getting every second element from the index 1,3,5
 print(name[::2])
 #Incoporating the slicing with stride, Getting every second element from the index 0-4
 print(name[0:5:2])
+
+#Concantenating two strings
+statement = name + " " +"Is the best"
+print(statement)
+
+#Printing the string 3 times
+print(3 * name)
+
+#concantenating strings
+name = name + " " + "Dances Pretty well."
+print(name)
+
+#Esacape Sequences
+#New line escape sequence
+print("Micheal Jackson \n is the best")
+
+#New tab escape sequence 
+print("Micheal Jackson \t is the best")
+
+#Including backslash in string
+print("Micheal Jackson is \\ the best")
+
+#r tells python that the string should be displayed as a raw string
+print(r"Micheal Jackson \ is the best")
