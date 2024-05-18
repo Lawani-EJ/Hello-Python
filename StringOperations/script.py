@@ -63,3 +63,33 @@ print("Micheal Jackson is \\ the best")
 
 #r tells python that the string should be displayed as a raw string
 print(r"Micheal Jackson \ is the best")
+
+#String method upper
+#converts all the characters in a string to uppercase
+
+a = "Thriller is his sixth studio album"
+print("Before applying upper:", a)
+
+b = a.upper()
+
+print("After applying upper:", b)
+
+#String method lower
+#converting all the characters in the string to lowercase
+a = "MICHEAL JACKSON IS THE BEST"
+print("Before applying lower:", a)
+
+b = a.lower()
+
+print("After applying lower:", b)
+
+#Replace method
+a = "Micheal Jackson is the best0"
+b = a.replace('Micheal',' KingKrule')
+print(b)
+
+#Replacing the old substrings with the new target substrings by removing several punctuations
+test_string = "Hello! Micheal Jackson has: 42 Characters."
+print (len(test_string))
+b = test_string.replace('!',' ').replace(':',' ').replace('.', ' ')
+print(b)
