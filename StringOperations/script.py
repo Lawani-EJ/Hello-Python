@@ -93,3 +93,21 @@ test_string = "Hello! Micheal Jackson has: 42 Characters."
 print (len(test_string))
 b = test_string.replace('!',' ').replace(':',' ').replace('.', ' ')
 print(b)
+
+# Find Method
+# The Find Method finds a sub-string.
+#This FInds the substring in the string.
+#Only the index of the first substring is going to be outputted
+
+atrtist_name = "King Krule"
+print(atrtist_name.find("Kr"))
+print(atrtist_name.find("Krule"))
+
+#If it can't find the substring in the string
+# -1 is the output
+print(atrtist_name.find("qwertyuiop"))
+
+# The split method splits the string at the specified operator and returns, a list
+# Splitting the substring into list
+splitting_string = (atrtist_name.split())
+print(splitting_string)
