@@ -111,3 +111,24 @@ print(atrtist_name.find("qwertyuiop"))
 # Splitting the substring into list
 splitting_string = (atrtist_name.split())
 print(splitting_string)
+
+#Importing the re built-in-method
+import re
+
+#RegEx Method
+#In python RegEx(Short for Regular Expression) is a tool for handling and matching strings
+#The RegEx provides several functions for working with regular expressions
+#These include search,split,findall and sub.
+sl = "This is me testing RegEx!"
+
+#Define the pattern to search for 
+pattern = r"testing"
+
+#Using the search() function to search for the pattern in the string
+search_result = re.search(pattern, sl)
+
+#Checking if a match was found 
+if search_result:
+    print("Match Found!!!")
+else:
+    print("Match Not Found!")
