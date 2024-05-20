@@ -93,3 +93,43 @@ test_string = "Hello! Micheal Jackson has: 42 Characters."
 print (len(test_string))
 b = test_string.replace('!',' ').replace(':',' ').replace('.', ' ')
 print(b)
+
+# Find Method
+# The Find Method finds a sub-string.
+#This FInds the substring in the string.
+#Only the index of the first substring is going to be outputted
+
+atrtist_name = "King Krule"
+print(atrtist_name.find("Kr"))
+print(atrtist_name.find("Krule"))
+
+#If it can't find the substring in the string
+# -1 is the output
+print(atrtist_name.find("qwertyuiop"))
+
+# The split method splits the string at the specified operator and returns, a list
+# Splitting the substring into list
+splitting_string = (atrtist_name.split())
+print(splitting_string)
+
+#Importing the re built-in-method
+import re
+
+#RegEx Method
+#In python RegEx(Short for Regular Expression) is a tool for handling and matching strings
+#The RegEx provides several functions for working with regular expressions
+#These include search,split,findall and sub.
+sl = "This is me testing RegEx!"
+
+#Define the pattern to search for 
+pattern = r"testing"
+
+#Using the search() function to search for the pattern in the string
+search_result = re.search(pattern, sl)
+
+#Checking if a match was found 
+if search_result:
+    print("Match Found!!!")
+    print("Thank You!")
+else:
+    print("Match Not Found!")
