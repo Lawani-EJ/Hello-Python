@@ -133,3 +133,17 @@ if search_result:
     print("Thank You!")
 else:
     print("Match Not Found!")
+
+import re
+# more RegEx examples
+# \d Matches any digit character (0-9)
+my_pattern = r"\d\d\d\d\d\d\d\d\d\d"
+text1 = "My Phone Number is 1234567890"
+match = re.search(my_pattern, text1)
+
+if match:
+        print("Phone number found!!!", match.group())
+else:
+        print("No Match!")
+        # the regular expression pattern is defined as r"\d\d\d\d\d\d\d\d\d\d", which uses the \d special sequence to match any digit character (0-9), and the \d sequence is repeated 10 times to match the ten consecutive didigts
+        
