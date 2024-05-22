@@ -147,3 +147,14 @@ else:
         print("No Match!")
         # the regular expression pattern is defined as r"\d\d\d\d\d\d\d\d\d\d", which uses the \d special sequence to match any digit character (0-9), and the \d sequence is repeated 10 times to match the ten consecutive didigts
         
+# More examples
+# \w special sequence 
+# \w mathces any non-word character
+
+import re
+my_pattern2 = r"\W"
+text2 = "Hello-world!!!"
+matches = re.findall(my_pattern2,text2)
+
+print("Mathces:",matches) 
+# the /W expression is used to match any non-word character,these are characters that are not letters (a-z) (A-Z) (0-9) and (_) 
