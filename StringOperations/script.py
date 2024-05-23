@@ -157,4 +157,21 @@ text2 = "Hello-world!!!"
 matches = re.findall(my_pattern2,text2)
 
 print("Mathces:",matches) 
-# the /W expression is used to match any non-word character,these are characters that are not letters (a-z) (A-Z) (0-9) and (_) 
+# the /W expression is used to match any non-word character,these are characters that are not letters (a-z) (A-Z) (0-9) and (_)
+
+
+# findall method
+# the findall method is able to find all the occurances of a specified pattern in a string
+import re
+s2 = "Micheal Jackson was a singer and Known as the King of Pop!!"
+# using the find all method to find the ocurrances of the letter 'as' in the string
+the_result = re.findall("as",s2)
+print(the_result)
+
+# the split method
+# the split function splits a string into an array of substrings based on a specific pattern
+# using the split function to split the string by the "\s"
+splitting_array = re.split("\s",s2)
+
+# printing out the the split array, the split array contains all the substrings, split by whitespace characters
+print(splitting_array)
