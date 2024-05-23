@@ -168,3 +168,10 @@ s2 = "Micheal Jackson was a singer and Known as the King of Pop!!"
 the_result = re.findall("as",s2)
 print(the_result)
 
+# the split method
+# the split function splits a string into an array of substrings based on a specific pattern
+# using the split function to split the string by the "\s"
+splitting_array = re.split("\s",s2)
+
+# printing out the the split array, the split array contains all the substrings, split by whitespace characters
+print(splitting_array)
