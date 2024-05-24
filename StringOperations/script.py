@@ -175,3 +175,17 @@ splitting_array = re.split("\s",s2)
 
 # printing out the the split array, the split array contains all the substrings, split by whitespace characters
 print(splitting_array)
+
+# the sub function
+# the sub function of a regular expression in python is used to replace all occurances of a pattern in a string with a specified replacement
+# Defining the regular expression pattern to search for
+my_pattern3 = r"King of Pop"
+
+# Defining the replacement string 
+replacement = "legend"
+
+# using the sub function to replace the pattern with the replacement string
+new_string = re.sub(my_pattern3, replacement, s2, flags=re.IGNORECASE)
+
+#In printing the new_string the new string contains the original string with the pattern replaced by the replacement string
+print(new_string)
