@@ -144,9 +144,8 @@ match = re.search(my_pattern, text1)
 if match:
         print("Phone number found!!!", match.group())
 else:
-        print("No Match!")
-        # the regular expression pattern is defined as r"\d\d\d\d\d\d\d\d\d\d", which uses the \d special sequence to match any digit character (0-9), and the \d sequence is repeated 10 times to match the ten consecutive didigts
-        
+     print("No Match!")
+# the regular expression pattern is defined as r"\d\d\d\d\d\d\d\d\d\d", which uses the \d special sequence to match any digit character (0-9), and the \d sequence is repeated 10 times to match the ten consecutive didigts
 # More examples
 # \w special sequence 
 # \w mathces any non-word character
@@ -189,3 +188,26 @@ new_string = re.sub(my_pattern3, replacement, s2, flags=re.IGNORECASE)
 
 #In printing the new_string the new string contains the original string with the pattern replaced by the replacement string
 print(new_string)
+
+# Finding the four consectuive digit characters using \d and the search function
+import re
+the_pattern = "House number-20111"
+the_pattern = re.search("\d",the_pattern)
+if the_pattern:
+     print("Digit found in the Pattern") #When the pattern is "House number-20111" having a digit number
+else:
+     print("Digit not Found in the Pattern!") #When the pattern is "House number" not having a digit number
+
+# For the string strl, replacing the sub-string fox with bear using the sub
+import re
+strl = "The quick brown fox jumps over the lazy dog."
+strl2 = r"fox"
+replacement_word = "bear"
+new_strl = re.sub(strl2,replacement_word,strl, flags=re.IGNORECASE)
+print(new_strl)
+
+# finding all occurances in a string
+import re
+strl3 = "How much wood would a woodchuck chuck, if a woodchuck could chuck wood?"
+finding = re.findall("woo",strl3)
+print(finding)
