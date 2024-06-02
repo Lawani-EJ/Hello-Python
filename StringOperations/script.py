@@ -211,3 +211,8 @@ import re
 strl3 = "How much wood would a woodchuck chuck, if a woodchuck could chuck wood?"
 finding = re.findall("woo",strl3)
 print(finding)
+
+practice = "Lizz"
+print(practice[0:2])
+
+var = '123456789'
