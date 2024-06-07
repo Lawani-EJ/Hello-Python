@@ -30,3 +30,29 @@ print(tuple2[0:3])
 print(tuple2[3:4])
 print(tuple2[3:5])
 print(tuple1[0:2])
+
+# Sorting in tuples
+tuple3 = (0,9,6,5,10,8,9,6,2)
+print(tuple3)
+# sorting the tuples in a value and saving it in a new tuple
+tupleSort = sorted(tuple3)
+print(tupleSort)
+# When this result is printed out in the terminal it automatically sorts out the numbers
+
+# Nesting in tuples
+NestTuple = (1,2,("pop","rock"),(3,4),("disco",(1,2)))
+#In creating the nested tuple, the tuple includes other tuples, and it can be obtained through the index
+# printing the elements on each index of the tuple
+print(NestTuple[0])
+print(NestTuple[1])
+print(NestTuple[2])
+print(NestTuple[3])
+print(NestTuple[4])
+
+# also noting the use of the second index to access the other tuples
+print("Element 2, 0 of Tuple: ",   NestTuple[2][0])
+print("Element 2, 1 of Tuple: ",   NestTuple[2][1])
+print("Element 3, 0 of Tuple: ",   NestTuple[3][0])
+print("Element 3, 1 of Tuple: ",   NestTuple[3][1])
+print("Element 4, 0 of Tuple: ",   NestTuple[4][0])
+print("Element 4, 1 of Tuple: ",   NestTuple[4][1])
