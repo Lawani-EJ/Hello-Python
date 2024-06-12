@@ -24,6 +24,7 @@ print(tuple1[0:2])
 
 tuple3 = (0,9,6,5,10,8,9,6,2)
 print(tuple3)
+print(len(tuple3))
 
 tupleSort = sorted(tuple3)
 print(tupleSort)
@@ -42,3 +43,13 @@ print("Element 3, 0 of Tuple: ",   NestTuple[3][0])
 print("Element 3, 1 of Tuple: ",   NestTuple[3][1])
 print("Element 4, 0 of Tuple: ",   NestTuple[4][0])
 print("Element 4, 1 of Tuple: ",   NestTuple[4][1])
+
+print(NestTuple[2][1][0])
+print(NestTuple[2][0][0])
+print(NestTuple[2][1][1])
+print(NestTuple[4][1][0])
+print(NestTuple[4][1][1])
+print(NestTuple[4][0][1])
+
+genres_tuples = ("pop","rock","soul","hard-rock","soft-rock","R&B","progressive rock","disco")
+print(len(genres_tuples))
