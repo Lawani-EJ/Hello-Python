@@ -24,7 +24,38 @@ print(album_set1,album_set2)
 FindIntersection = album_set1 & album_set2
 print(FindIntersection)
 
-print(album_set1.difference(album_set2))
-print(album_set2.difference(album_set1))
+FindDifference = album_set1.difference(album_set2)
+print(FindDifference)
+# print(album_set1.difference(album_set2))
 
-print (album_set1.intersection(album_set2))
+FindDifference2 = album_set2.difference(album_set1)
+print(FindDifference2)
+# print(album_set2.difference(album_set1))
+
+FindIntersection2 = album_set1.intersection(album_set2)
+print(FindIntersection2)
+# print (album_set1.intersection(album_set2))
+
+FindUnion = album_set1.union(album_set2)
+print(FindUnion)
+# print(album_set1.union(album_set2))
+
+CheckIfSuperSet = album_set1.issuperset(album_set2)
+print(CheckIfSuperSet)
+
+CheckIfSubSet = album_set1.issubset(album_set2)
+print(CheckIfSubSet)
+
+CheckIfSubSet2 = {"Back In Black","AC/DC"}.issubset(album_set1)
+print(CheckIfSubSet2)
+
+CheckIfSuperSet2 = (album_set1).issuperset({"Back In Black","AC/DC"})
+print(CheckIfSuperSet2)
+
+# Several Quizzes!
+# Consider the list A = [1, 2, 2, 1] and set B = set([1, 2, 2, 1]), does sum(A) == sum(B)?
+A = [1, 2, 2, 1]
+B = set([1, 2, 2, 1])
+
+print("The sum of A :",sum(A))
+print("The sum of B :",sum(B))
