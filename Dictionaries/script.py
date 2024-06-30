@@ -23,3 +23,13 @@ print(getting_release_year_values)
 release_year_dict['Graduation'] = '2007'
 updated_release_year_dict = release_year_dict
 print (updated_release_year_dict)
+
+del(release_year_dict['Thriller'])
+del(release_year_dict['Graduation'])
+deleted_release_year_dict = release_year_dict
+print(deleted_release_year_dict)
+
+verify = 'Thriller' in release_year_dict
+print(verify)
+verify2 = 'Back in Black' in release_year_dict
+print(verify2)
