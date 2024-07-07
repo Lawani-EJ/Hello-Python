@@ -34,3 +34,19 @@ if album2_year > 1980:
 else :
      print("This album is less than 1980")
      print("Do something")
+
+album3_year = 2000
+if (album3_year > 1980) and (album3_year < 2021) :
+    print("Album Year was Between 1980 and 2021")
+    print("Loading..........")
+    print("Doing Some stuff")
+
+album4_year = 2023
+if (album4_year < 2021) or (album4_year > 2022):
+     print ("Thea Album Was Not Made in 2023")
+else :
+     print("The Album Was Made in 2023")
+
+album5_year = 2024
+if not (album5_year == 2021):
+     print("Album 5's year is not 2021 it's 2024")
