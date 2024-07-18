@@ -11,7 +11,7 @@ while(y!=x):
     y = y+1
 
 dates = [1980,1982,1973]
-N = len (dates)
+N = len(dates)
 for i in range (N):
     print(dates[i])
 
@@ -21,7 +21,7 @@ for i in range (N):
 for year in dates:
     print(year)
 
-squares = ["red","Yellow","Green","Blue"]
+squares = ["red","Yellow","Green","Purple","Blue"]
 for i in range(0,5):
     print("Before number square: ", i , "was" , squares[i])
     squares[i] = "white"
