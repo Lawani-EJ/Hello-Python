@@ -63,3 +63,22 @@ while(i < len(squares) and squares[i] == 'orange'):
     new_squares.append(squares[i])
     i = i + 1
     print(new_squares) 
+
+# Your little brother has just learned multiplication tables in school. Today he has learned tables of 6 and 7 help him memorise both the tables by printing them using a for loop 
+print("The multiplication table of 6 = ")
+for i in range (10):
+    print("6*",i,"=",6*i)
+print("The multipluication table of 7 = ")
+for i in range (10):
+    print("7*",i,"=",7*i)
+
+# Your brother needs to write an essay on the animals he saw at the zoo whose names are made of 7 letters help him find those animals through a while loop and create a seperate list for such animals
+Animals = ["lion","giraffe","gorilla","parrots","crocodile","deer","swan"]
+New = []
+i = 0
+while i<len(Animals):
+    j = Animals[i]
+    if(len(j)==7):
+        New.append(j)
+        i = i+1
+        print(New)
