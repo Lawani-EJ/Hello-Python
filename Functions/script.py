@@ -37,3 +37,51 @@ square(6)
 x = 3
 y = square(x)
 print(y)
+
+def square(a):
+    # local varaibles
+    # varaibles that are defined inside a function
+    b = 1
+    c = a*a*+b
+    print(a,"if you sqaure +1",c)
+
+#Global variables
+# variables that are defined outside a function
+x = 3
+z = square(x)
+print(z)
+
+def f():
+    print("inside the function",s)
+
+#Global variable
+s = "I love studying"
+f()
+print("Outside function",s)
+
+def f():
+    s = "Me too!"
+    print(s)
+
+#Global variables
+s = "I love studying"
+f()     
+print(s)
+
+    # This function modifies the global variable 's'
+def f():
+    global s
+    s += ' DANIEL'
+    print(s)
+    s = "Python is the best"
+    print(s) 
+
+# Global Scope
+s = "Python is great!" 
+f()
+print(s)
+
+#define a string that concantenates two strings
+def con(a,b):
+    return (a+b)
+print(con("Hello","World"))
