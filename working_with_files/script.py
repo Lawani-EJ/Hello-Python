@@ -49,3 +49,24 @@ with open(example1, "r") as file1:
 with open(example1, "r") as file1:
     ContentLine = "First Line " + file1.readline()
     print(ContentLine)
+
+# passing arguments specifying the number of character to be read
+with open(example1, "r") as file1:
+    ArgumentContent1 = file1.readline(20)
+    ArgumentContent2 = file1.read(20)
+    print(ArgumentContent1)
+    print(ArgumentContent2)
+
+# iterating in each line 
+with open(example1, "r") as file1:
+    i = 0;
+    for line in file1:
+        print("Iteration", str(i), ": ", line)
+        i = i + 1
+
+# reading through all the lines and saving them as a list 
+with open(example1, "r") as file1:
+    FileAsList = file1.readlines()
+    print(FileAsList[0])
+    print(FileAsList[1])
+    print(FileAsList[2])
