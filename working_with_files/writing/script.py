@@ -23,3 +23,13 @@ with open('Example2.txt', 'w') as writefile:
 # Verifying and reading if writing has been implemented successfully
 with open('Example2.txt', 'r') as testList:
     print(testList.read())
+
+# Appending
+with open('Example2.txt', 'a') as performAppend:
+    performAppend.write("This is line C \n")
+    performAppend.write("This is line D \n")
+    performAppend.write("This is line E \n")
+
+# Veryfying and reading if appending has been perforomed 
+with open('Example2.txt','r') as testAppend:
+    print(testAppend.read())
