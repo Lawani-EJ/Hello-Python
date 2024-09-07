@@ -30,3 +30,25 @@ data = pd.DataFrame(dict1)
 data.to_csv('Data.csv')
 new_data = pd.read_csv('Data.csv')
 new_data.head(5)
+
+# Getting info for the dataframe 
+print(df.info())
+print(df.head())
+print(df.tail())
+print(df.describe())
+
+
+print(new_data[['Age','Home Address']])
+print(new_data[0:4])
+
+print(new_data)
+new_data = new_data.set_index('Name')
+print(new_data)
+
+# loc method 
+print(new_data.loc[["John","Jack"]])
+print(new_data.iloc[:, 1:3])
+
+# Drop methood 
+new_data = new_data.drop(['Last Name', 'Home Address'], axis=1)
+print(new_data)
