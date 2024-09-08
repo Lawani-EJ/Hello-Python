@@ -52,3 +52,14 @@ print(new_data.iloc[:, 1:3])
 # Drop methood 
 new_data = new_data.drop(['Last Name', 'Home Address'], axis=1)
 print(new_data)
+
+dict2 = {
+    "Age":["40"],
+    "Role":["Consultant"],
+    "Home Address":["Paris"],
+    "Full Name":["Pieere Jean Luc"]
+}
+
+data2 = pd.DataFrame(dict2)
+new_data = pd.concat([new_data,data2])
+print(new_data)
