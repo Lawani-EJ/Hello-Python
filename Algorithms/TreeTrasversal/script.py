@@ -68,6 +68,18 @@ def pre_order(node):
         pre_order(node.left)
         pre_order(node.right)
 
+def in_order(node):
+    if node is not None:
+        in_order(node.left)
+        print(node.data, end=" ")
+        in_order(node.right)
+
+
+def post_order(node):
+    if node is not None:
+        post_order(node.left)
+        post_order(node.right)
+        print(node.data, end=" ")
     #     1
     #    / \
     #   2   3
@@ -84,3 +96,7 @@ root.right.right = Node(7)
 
 print("Pre-Order Trasversal: ")
 pre_order(root)
+print("\n InOrder Trasversal: ")
+in_order(root)
+print("\n PostOrder Trasversal: ")
+post_order(root)
