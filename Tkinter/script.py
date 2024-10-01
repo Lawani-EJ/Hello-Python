@@ -1,3 +1,5 @@
-import tkinter
-m = tkinter.Tk()
-m.mainloop()
+from tkinter import *
+root = Tk()
+w = Label(root, text="Hello-Python")
+w.pack()
+root.mainloop()
