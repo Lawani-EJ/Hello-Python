@@ -1,6 +1,10 @@
-import tkinter as tk
-r = tk.Tk()
-r.title ("Whatever you do ... Please!! Don't click the button")
-button = tk.Button(r, text="Click Me", width=28, command=r.destroy)
-button.pack()
-r.mainloop()
+from tkinter import *
+master = Tk()
+Label(master, text="Enter Your First Name: ").grid(row=0)
+Label(master, text="Enter Your Last Name: ").grid(row=1)
+e1 = Entry(master)
+e2 = Entry(master)
+
+e1.grid(row=0, column=1)
+e2.grid(row=1, column=1)
+mainloop()
