@@ -1,7 +1,6 @@
 from tkinter import *
-master = Tk()
-var1 = IntVar()
-Checkbutton(master, text='Male', variable=var1).grid(row=0, sticky=W)
-var2 = IntVar()
-Checkbutton(master, text='Female', variable=var2).grid(row=1, sticky=W)
+root = Tk()
+v = IntVar()
+Radiobutton(root, text="Hello world", variable=v, value=1).pack(anchor=W)
+Radiobutton(root, text="Hello python", variable=v, value=2).pack(anchor=W)
 mainloop()
