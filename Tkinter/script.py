@@ -1,6 +1,9 @@
 from tkinter import *
-root = Tk()
-v = IntVar()
-Radiobutton(root, text="Hello world", variable=v, value=1).pack(anchor=W)
-Radiobutton(root, text="Hello python", variable=v, value=2).pack(anchor=W)
+top = Tk()
+Lb = Listbox(top)
+Lb.insert(1, "Red")
+Lb.insert(2, "Green")
+Lb.insert(3, "Blue")
+Lb.insert(4, "Yellow")
+Lb.pack()
 mainloop()
