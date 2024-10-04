@@ -1,9 +1,11 @@
 from tkinter import *
-top = Tk()
-Lb = Listbox(top)
-Lb.insert(1, "Red")
-Lb.insert(2, "Green")
-Lb.insert(3, "Blue")
-Lb.insert(4, "Yellow")
-Lb.pack()
+root = Tk()
+scrollbar = Scrollbar(root)
+scrollbar.pack(side=RIGHT, fill=Y)
+mylist = Listbox(root, yscrollcommand=scrollbar.set)
+
+for line in range(100):
+    mylist.insert(END, "This is line number " + str(line))
+mylist.pack(side=LEFT, fill=BOTH)
+scrollbar.config(command=mylist.yview)
 mainloop()
