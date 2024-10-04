@@ -1,11 +1,14 @@
 from tkinter import *
 root = Tk()
-scrollbar = Scrollbar(root)
-scrollbar.pack(side=RIGHT, fill=Y)
-mylist = Listbox(root, yscrollcommand=scrollbar.set)
-
-for line in range(100):
-    mylist.insert(END, "This is line number " + str(line))
-mylist.pack(side=LEFT, fill=BOTH)
-scrollbar.config(command=mylist.yview)
+menu = Menu(root)
+root.config(menu=menu)
+filemenu = Menu(menu)
+menu.add_cascade(label='File', menu=filemenu)
+filemenu.add_command(label='New')
+filemenu.add_command(label='Open....')
+filemenu.add_separator()
+filemenu.add_command(label='Exit', command=root.quit)
+helpmenu = Menu(menu)
+menu.add_cascade(label='Help', menu=helpmenu)
+helpmenu.add_command(label='About')
 mainloop()
