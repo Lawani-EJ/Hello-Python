@@ -1,6 +1,7 @@
 from tkinter import *
-root = Tk()
-root.title("Hello Python")
-top = Toplevel()
-top.title("Python is a Programming language") 
-top.mainloop()
+main = Tk()
+ourMessage = "This Our New Message!!"
+messageVar = Message(main, text=ourMessage)
+messageVar.config(bg='red')
+messageVar.pack() 
+main.mainloop()
