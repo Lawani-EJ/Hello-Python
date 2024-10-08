@@ -1,7 +1,12 @@
 from tkinter import *
-main = Tk()
-ourMessage = "This Our New Message!!"
-messageVar = Message(main, text=ourMessage)
-messageVar.config(bg='red')
-messageVar.pack() 
-main.mainloop()
+top = Tk()
+mb = Menubutton (top, text = "Go and learn python!!")
+mb.grid()
+mb.menu = Menu (mb, tearoff = 0)
+mb["menu"] = mb.menu
+cVar = IntVar()
+aVar = IntVar()
+mb.menu.add_checkbutton (label = 'Contacts', variable=cVar)
+mb.menu.add_checkbutton (label = 'About Us', variable=aVar)
+mb.pack()
+top.mainloop()
