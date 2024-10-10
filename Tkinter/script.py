@@ -1,6 +1,6 @@
 from tkinter import *
-
-master = Tk()
-w = Spinbox(master, from_=0, to=10)
-w.pack()
+root = Tk()
+T = Text(root, height=4, width=30)
+T.pack()
+T.insert(END, "Object \n Oriented \n Programming")
 mainloop()
