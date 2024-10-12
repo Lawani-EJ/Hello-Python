@@ -1,11 +1,13 @@
-from tkinter import *
+import tkinter as tk
+root = tk.Tk()
+root.title("Various Color Options Using tkinter. 👌")
 
-m1 = PanedWindow()
-m1.pack(fill=BOTH, expand=1)
-left = Entry(m1, bd=5)
-m1.add(left)
-m2 = PanedWindow(m1, orient=VERTICAL)
-m1.add(m2)
-top = Scale(m2, orient=HORIZONTAL)
-m2.add(top)
-mainloop()
+button = tk.Button(root, text="Hi 🫢 Click ME!", activebackground="blue", activeforeground="white")
+button.pack()
+
+label = tk.Label(root,text= "Hello Friends😁😁", fg="black", bg="grey")
+label.pack()
+
+entry = tk.Entry(root, selectbackground="lightblue", selectforeground="black")
+entry.pack()
+root.mainloop()
