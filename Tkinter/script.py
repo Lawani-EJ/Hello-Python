@@ -1,9 +1,11 @@
 from tkinter import *
-master = Tk()
-w = Canvas(master, width=40, height=60)
-w.pack()
-canvas_height = 20
-canvas_width = 200
-y = int(canvas_height / 2)
-w.create_line(0, y, canvas_width, y)
+
+m1 = PanedWindow()
+m1.pack(fill=BOTH, expand=1)
+left = Entry(m1, bd=5)
+m1.add(left)
+m2 = PanedWindow(m1, orient=VERTICAL)
+m1.add(m2)
+top = Scale(m2, orient=HORIZONTAL)
+m2.add(top)
 mainloop()
