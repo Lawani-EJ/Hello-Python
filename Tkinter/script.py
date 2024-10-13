@@ -1,13 +1,12 @@
 import tkinter as tk
 root = tk.Tk()
-root.title("Various Color Options Using tkinter. 👌")
+root.title("Pack Examples")
 
-button = tk.Button(root, text="Hi 🫢 Click ME!", activebackground="blue", activeforeground="white")
-button.pack()
+button1 = tk.Button(root, text="This is the first button.")
+button2 = tk.Button(root, text="This is the second button.")
+button3 = tk.Button(root, text="This is the third button.")
 
-label = tk.Label(root,text= "Hello Friends😁😁", fg="black", bg="grey")
-label.pack()
-
-entry = tk.Entry(root, selectbackground="lightblue", selectforeground="black")
-entry.pack()
+button1.pack()
+button2.pack()
+button3.pack()
 root.mainloop()
