@@ -29,7 +29,15 @@ with open('Example2.txt', 'a') as performAppend:
     performAppend.write("This is line C \n")
     performAppend.write("This is line D \n")
     performAppend.write("This is line E \n")
+    performAppend.write("Im just testing \n")
 
 # Veryfying and reading if appending has been perforomed 
 with open('Example2.txt','r') as testAppend:
     print(testAppend.read())
+
+# an additional mode
+# a+ : Appending and Reading. Creates a new file, if none exists. 
+
+with open('Example2.txt', 'a+') as testWritefile:
+    testWritefile.write("This is the second time testing \n")
+    print(testWritefile.read())
