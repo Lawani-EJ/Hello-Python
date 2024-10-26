@@ -41,3 +41,14 @@ with open('Example2.txt','r') as testAppend:
 with open('Example2.txt', 'a+') as testWritefile:
     testWritefile.write("This is the second time testing \n")
     print(testWritefile.read())
+
+# Copying a file
+# Copying a file into another
+with open('Example2.txt', 'r') as readThefile:
+    with open('Example3.txt', 'w') as writeThefile:
+        for line in readThefile:
+            writeThefile.write(line)
+
+# Now verifying if the copy has been successfully executed
+with open('Example3.txt', 'r') as testThefile:
+    print(testThefile.read())
