@@ -109,44 +109,44 @@
 # df = pd.DataFrame({"Subjects":["Math","Engl","CS"],"Scores":[20,30,40],"Grades":["A","B","C"]})
 # print(df)
 
-import pandas as pd
-table = pd.read_csv("vgsales.csv")
-print(table)
-print(table[["Rank","Name"]])
-print(table.head())
-print(table.info())
-print(table.columns)
-print(table.describe())
+# import pandas as pd
+# table = pd.read_csv("vgsales.csv")
+# print(table)
+# print(table[["Rank","Name"]])
+# print(table.head())
+# print(table.info())
+# print(table.columns)
+# print(table.describe())
 
 
-table["NorthAmerica and Europe sales"] = (table["NA_Sales"] + table["JP_Sales"])
-print(table)
-table["Other_Sales"]  = table["Other_Sales"] * 4
-print(table)
+# table["NorthAmerica and Europe sales"] = (table["NA_Sales"] + table["JP_Sales"])
+# print(table)
+# table["Other_Sales"]  = table["Other_Sales"] * 4
+# print(table)
 
-print(table.head(2))
-print(table.isnull().sum())
+# print(table.head(2))
+# print(table.isnull().sum())
 
-# subsetting
-print(table[table['Year'] > 1999])
-print(table [(table['Year'] > 1999) & (table["Year"] < 2004)])
+# # subsetting
+# print(table[table['Year'] > 1999])
+# print(table [(table['Year'] > 1999) & (table["Year"] < 2004)])
 
-#pick nitendo games released after > 1995
-# print(table['Publisher'] > 1995])
-print(table[(table['Publisher'] == 'Activision') & (table['Year'] > 1995)])
+# #pick nitendo games released after > 1995
+# # print(table['Publisher'] > 1995])
+# print(table[(table['Publisher'] == 'Activision') & (table['Year'] > 1995)])
 
-#group by
-print(table.groupby('Platform')[['Global_Sales']].sum())
+# #group by
+# print(table.groupby('Platform')[['Global_Sales']].sum())
 
-#Deleting 
-print(table.drop('Global_Sales', axis = 1, inplace=True))
+# #Deleting 
+# print(table.drop('Global_Sales', axis = 1, inplace=True))
 
-#value count
-print(table['Platform'].value_counts())
-print(table['Genre'].unique())
-print(['Global_Sales'].var())
-#pivot table
-# print(table.pivot())
+# #value count
+# print(table['Platform'].value_counts())
+# print(table['Genre'].unique())
+# print(['Global_Sales'].var())
+# #pivot table
+# # print(table.pivot())
 
 import pandas as pd
 df = pd.DataFrame({'a':[11,21,31],'b':[21,22,23]})
@@ -156,3 +156,9 @@ print(df.head(3))
 
 # obtaining column a 
 print(df['a'])
+
+# Finding the unique values that are in column a 
+print(df['a'].unique())
+
+# Returning the dataframe that has only the rows where the column a is less than 2 
+print(df[df['a']<2])
