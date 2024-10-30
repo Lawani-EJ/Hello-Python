@@ -148,17 +148,39 @@
 # #pivot table
 # # print(table.pivot())
 
+# import pandas as pd
+# df = pd.DataFrame({'a':[11,21,31],'b':[21,22,23]})
+
+# # displaying the first 3 rows 
+# print(df.head(3))
+
+# # obtaining column a 
+# print(df['a'])
+
+# # Finding the unique values that are in column a 
+# print(df['a'].unique())
+
+# # Returning the dataframe that has only the rows where the column a is less than 2 
+# print(df[df['a']<2])
+
 import pandas as pd
-df = pd.DataFrame({'a':[11,21,31],'b':[21,22,23]})
+import requests
+import io  # Import io for StringIO
 
-# displaying the first 3 rows 
-print(df.head(3))
+# Download the CSV file and read it into a DataFrame
+def download_and_load_csv(url):
+    response = requests.get(url)
+    if response.status_code == 200:
+        # Use io.StringIO to read the response text as a CSV
+        df = pd.read_csv(io.StringIO(response.text), encoding="utf-8")
+        return df
+    else:
+        print("Failed to download file")
+        return None
 
-# obtaining column a 
-print(df['a'])
+filename = "https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0101EN-SkillsNetwork/labs/Module%204/data/TopSellingAlbums.csv"
 
-# Finding the unique values that are in column a 
-print(df['a'].unique())
-
-# Returning the dataframe that has only the rows where the column a is less than 2 
-print(df[df['a']<2])
+# Load the data into a DataFrame
+df = download_and_load_csv(filename)
+if df is not None:
+    print(df.head())
