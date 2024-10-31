@@ -184,3 +184,18 @@ filename = "https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/I
 df = download_and_load_csv(filename)
 if df is not None:
     print(df.head())
+
+# Accessing the column length
+x = df[['Length']]
+print(x)
+
+# Getting the column as series
+x_series = df['Length']
+print(x_series)
+
+# Accessing multiple columns 
+x_multiple = df[['Artist','Length','Genre']]
+print(x_multiple)
+
+# Accessing unique elements is the iloc method where i can access the first row and the first column 
+print(df.iloc[0,0])
