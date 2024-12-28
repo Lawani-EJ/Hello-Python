@@ -53,3 +53,9 @@ print(Z)
 # calculate the sine of Z
 Z_sin = np.sin(Z)
 print(Z_sin)
+
+# Calculating transposed matrix 
+C = np.array([[1,1],[2,2],[3,3]])
+print(C)
+C_T = C.T
+print(C_T)
