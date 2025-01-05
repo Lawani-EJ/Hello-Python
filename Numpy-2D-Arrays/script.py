@@ -59,3 +59,18 @@ C = np.array([[1,1],[2,2],[3,3]])
 print(C)
 C_T = C.T
 print(C_T)
+
+
+# Class Quiz
+# create an array and convert it to a Numpy Array
+a = [[1,2,3],[4,5,6],[7,8,9]]
+A = np.array(a)
+print(A)
+# caluclate that size of the array 
+print(A.size)
+# Now access the first row and second column of the array
+print(A[0][1])
+# Now you will perform a matrix multiplication of the array with B
+B = np.array([[1,2],[3,4],[5,6]])
+X = np.dot(A,B)
+print(X)
