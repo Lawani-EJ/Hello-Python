@@ -35,3 +35,10 @@ print(r3.url)
 print("request body: ", r3.request.body)
 print(r3.status_code)
 print(r3.text)
+
+
+# making a POST request 
+url_post = 'http://httpbin.org'
+r_post = requests.post(url_post, data=payload)
+print("POST request URL: ",r_post.url)
+print("POST request body: ",r_post.request.body)
