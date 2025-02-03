@@ -20,6 +20,7 @@ my_car.car_info()
 my_car.sell()
 my_car.car_info()
 
+
 #Practice2
 class Student:
     def __init__(self,firstname,lastname,age,sex):
@@ -144,3 +145,55 @@ class Bank:
 my_bank = Bank("Elyon",3000)
 print(my_bank.withdraw(500))
 print(my_bank.deposit(30000))
+
+# Encapsulation example
+# class Book:
+#     def __init__(self, title, quantity, author, price):
+#         self.title = title
+#         self.quantity = quantity
+#         self.author = author
+#         self.price = price
+#         self. __discount = 0.10
+    
+#     def __repr__(self):
+#         return f"Book({self.title}, {self.quantity}, {self.author}, {self.price})"
+
+# book1 = Book('Book 1', 12, 'Author 1', 120)
+
+# print(book1.title)
+# print(book1.quantity)
+# print(book1.author)
+# print(book1.price)
+# print(book1.__discount)
+
+# Example2 using getters and setters
+class Book:
+    def __init__(self, title, quantity, author, price):
+        self.title = title
+        self.quantity = quantity
+        self.author = author
+        self.price = price  
+        self.__discount = None  
+
+    # Setter
+    def set_discount(self, discount):
+        self.__discount = discount
+
+    # Getter    
+    def get_price(self):
+        if self.__discount:
+            return self.price * (1 - self.__discount)  
+        return self.price  
+    
+    def __repr__(self):
+        return f"Book({self.title}, Quantity: {self.quantity}, Author: {self.author}, Price: {self.get_price()})"
+    
+
+single_book = Book("Two States", 1, "Chetan Bhagat", 200)
+bulk_book = Book("Two States", 100, "Chetan Bhagat", 200)
+bulk_book.set_discount(0.10)
+
+print(single_book.get_price())  # 200
+print(bulk_book.get_price())  # 180 (after 10% discount)
+print(single_book)  # Displays book details
+print(bulk_book)  # Displays book details with discounted price
