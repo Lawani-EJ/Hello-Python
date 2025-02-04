@@ -1,27 +1,28 @@
-class Car(object):
+class Car:
     def __init__(self,make,model,color):
         self.make = make
         self.model = model
         self.color = color
-        self.owner_no = 0
+        # self.owner_no = 0
 
     def car_info(self):
         print("Make: ",self.make)
         print("Model: ",self.model)
         print("Color: ",self.color)
-        print("Number of owners",self.owner_no)
+        # print("Number of owners",self.owner_no)
     
-    def sell(self):
-        self.owner_no += 1
+    # def sell(self):
+    #     self.owner_no += 1
 
 my_car = Car("Honda","Accord","Black")
 
 my_car.car_info()
-my_car.sell()
 my_car.car_info()
+# my_car.sell()
 
 
 #Practice2
+# class definiaiton
 class Student:
     def __init__(self,firstname,lastname,age,sex):
         self.firstname = firstname
@@ -29,11 +30,19 @@ class Student:
         self.age = age
         self.sex = sex
 
+# Method defination
+    def introduce(self):
+        print(f"Hello my name is {self.firstname} {self.lastname} and i am {self.age} years old")
+
 #Create instances
 Student1 = Student("Lawani Elyon","John",23,"M")
 Student2 = Student("Gojo","Satorou",21,"M")
 Student3 = Student("Hinata","Hyuga",20,"F")
-print(f"Hello {Student1.firstname} and your age is {Student2.age}")
+
+# Execute the method
+print(Student1.introduce()) 
+print(Student2.introduce())
+print(Student3.introduce())
 
 #Method practice2
 class Student:
