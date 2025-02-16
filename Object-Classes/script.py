@@ -156,23 +156,23 @@ print(my_bank.withdraw(500))
 print(my_bank.deposit(30000))
 
 # Encapsulation example
-# class Book:
-#     def __init__(self, title, quantity, author, price):
-#         self.title = title
-#         self.quantity = quantity
-#         self.author = author
-#         self.price = price
-#         self. __discount = 0.10
+class Book:
+    def __init__(self, title, quantity, author, price):
+        self.title = title
+        self.quantity = quantity
+        self.author = author
+        self.price = price
+        self. __discount = 0.10
     
-#     def __repr__(self):
-#         return f"Book({self.title}, {self.quantity}, {self.author}, {self.price})"
+    def __repr__(self):
+        return f"Book({self.title}, {self.quantity}, {self.author}, {self.price})"
 
-# book1 = Book('Book 1', 12, 'Author 1', 120)
+book1 = Book('Book 1', 12, 'Author 1', 120)
 
-# print(book1.title)
-# print(book1.quantity)
-# print(book1.author)
-# print(book1.price)
+print(book1.title)
+print(book1.quantity)
+print(book1.author)
+print(book1.price)
 # print(book1.__discount)
 
 # Example2 using getters and setters
@@ -205,4 +205,55 @@ bulk_book.set_discount(0.10)
 print(single_book.get_price())  # 200
 print(bulk_book.get_price())  # 180 (after 10% discount)
 print(single_book)  # Displays book details
-print(bulk_book)  # Displays book details with discounted price
+print(bulk_book)  
+
+class Person:
+    def __init__(self):
+        self.__my_name = 111999  
+
+    def get_my_name(self):
+        return self.__my_name 
+
+    def set_my_name(self, new_name):
+        self.__my_name = new_name 
+
+person = Person()
+
+try:
+    print(person.__my_name)
+except AttributeError:
+    print("Cannot access private variable directly!")
+
+
+person.__my_name = 999111  # This creates a new public variable, not modifying the private one
+print("After direct modification attempt:", person.get_my_name()) 
+
+# Modify the private variable using the setter method
+person.set_my_name(999111)
+print("After using setter:", person.get_my_name())  # Now changed to 999111
+
+# Doctyping
+def multiply_numbers(a,b):
+    """
+    Multiplies two numbers and returns the result.
+
+    Args:
+    a(int): The first number.
+    b(int): The second number.
+
+    Returns:
+    int: The product of a and b.
+    """
+    return a*b
+print(multiply_numbers(3,5))
+
+# Docstrings
+def my_function():
+    '''
+    Demonstrating triple double quotes
+    docstrings and does nothing really
+    '''
+    return None
+print("Using __doc__ gives: ")
+print(my_function.__doc__)
+
