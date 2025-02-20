@@ -257,3 +257,16 @@ def my_function():
 print("Using __doc__ gives: ")
 print(my_function.__doc__)
 
+print ("Program One:For loop Method")
+numx =[3,4,5,6,7,8,9,10]
+cubes = []
+for x in numx:
+    cubes.append(x**3)
+print ("OUTPUT.",cubes) 
+
+print ("Program Two :Map Functionality,")
+numx =[3,4,5,6,7,8,9,10]
+def cubes(x):
+    return x**3
+zz = list(map(cubes,numx))
+print("OUTPUT:",zz)
