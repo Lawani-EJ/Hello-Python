@@ -42,6 +42,13 @@ print ("copiedList[0]",copiedList[0])
 copyList[0] = "hard rock"
 print ("copiedList[0]",copiedList[0])
 
+#Nested List 
+myNestedList = [[22,14,16], ["Joe","Sam","Abel"], [True, False, True]]
+print("This is my Nested List: ",myNestedList)
+# print(myNestedList[1][1])
+myNestedList[1][1] = "Dante"
+print("This is my Nested List: ",myNestedList)
+
 # Class questions
 # Question 2
 # Write a Python program to get a list, sorted in increasing order by the last element in each tuple, from a given list of non-empty tuples.
